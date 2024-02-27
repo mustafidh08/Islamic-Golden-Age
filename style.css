@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  color: #000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  background-color: beige;
+}
+
+nav,
+footer {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: "";
+}
+
+nav > div {
+  display: flex;
+  gap: 50px;
+}
+
+footer {
+  bottom: 0;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  width: max-content;
+  padding: 0 150px;
+  height: 100%;
+  display: flex;
+  margin-top: 8rem;
+  gap: 100px;
+}
+
+.slide {
+  width: 500px;
+  height: 300px;
+  font-size: 15px;
+}
+
+.slide h2 {
+  margin-top: 2%;
+}
+
+.slide p {
+  margin-top: 1%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.marker-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: 100vh;
+}
+
+.marker {
+  position: relative;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+.marker:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 60px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border: 2px solid #000;
+  border-radius: 100%;
+}
+
+.active-slide {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1000px) {
+  .slide {
+    width: 400px;
+    height: 230px;
+    font-size: 15px;
+  }
+}
+
+/* MINI TABLETS */
+@media only screen and (max-width: 600px) {
+  .slide {
+    width: 390px;
+    height: 230px;
+  }
+}
+
+/* HP */
+@media only screen and (max-width: 600px) {
+  .slide {
+    width: 390px;
+    height: 230px;
+  }
+}
